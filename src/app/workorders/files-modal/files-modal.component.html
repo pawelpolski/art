@@ -1,0 +1,20 @@
+<div class="modal" [ngClass]="showForm ? 'is-active' : ''">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Pliki</p>
+    </header>
+    <section class="modal-card-body">
+      <div *ngFor="let f of files[0].files">
+        <div *ngIf="f as url">
+          <!-- // <img [src]="url"><br> -->
+           <a [href]="url.downloadURL" target="_blank" rel="noopener">{{ url.fullName }}</a>
+         </div> 
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" (click)="closeForm()">Zamknij</button>
+    </footer>
+  </div>
+</div>
+

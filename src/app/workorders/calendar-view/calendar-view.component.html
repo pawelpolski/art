@@ -1,0 +1,107 @@
+<h1 *ngIf="calendar2">{{ calendar2.feed.title.$t }}</h1>
+
+<mat-form-field class="full-width">
+  <mat-select placeholder="Data" [(ngModel)]="day">
+    <mat-option *ngFor="let pair of pairsKeyVal" (click)="chooseDay()" [value]="pair.key">{{pair.value}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<!-- <div *ngIf="calendar2">
+  <div *ngFor="let row of wholeDay">
+    {{ row | json }}
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-4 col-12">
+      <article class="message is-dark" *ngIf="calendar2 && bielsko">
+          <div class="message-header">
+            Bielsko-Biała - {{ bielsko.length }}
+          </div>
+          <div class="message-body">
+            {{ bielsko.value }}
+      
+            <div *ngFor="let row of bielsko">
+              <span *ngIf="row.index <= 10" class="badge badge-warning">09:00-11:00</span>
+              <span *ngIf="row.index >= 10 && row.index <= 35" class="badge badge-warning">11:00-13:00</span>
+              <span *ngIf="row.index >= 35 && row.index <= 55" class="badge badge-warning">13:00-15:00</span>
+              <span *ngIf="row.index >= 55 && row.index <= 72" class="badge badge-warning">15:00-17:00</span>
+              <span *ngIf="row.index >= 72" class="badge badge-warning">17:00-19:00</span>
+              <span *ngIf="row.type === 'ETTH'" class="badge badge-danger">{{ row.type }}</span>
+              <span *ngIf="row.type === 'PON'" class="badge badge-primary">{{ row.type }}</span>
+              <br>
+              {{ row.city }}, {{ row.street }}
+              <br>
+              
+              {{ row.description }}
+      
+              <hr>
+            </div>
+          </div>
+        </article>
+
+  </div>
+
+  <div class="col-md-4 col-12">
+      <article class="message is-info" *ngIf="calendar2 && jastrzebie">
+          <div class="message-header">
+            Jastrzębie-Zdrój - {{ jastrzebie.length }}
+          </div>
+          <div class="message-body">
+            {{ jastrzebie.value }}
+      
+            <div *ngFor="let row of jastrzebie">
+              <span *ngIf="row.index <= 10" class="badge badge-warning">09:00-11:00</span>
+              <span *ngIf="row.index >= 10 && row.index <= 35" class="badge badge-warning">11:00-13:00</span>
+              <span *ngIf="row.index >= 35 && row.index <= 55" class="badge badge-warning">13:00-15:00</span>
+              <span *ngIf="row.index >= 55 && row.index <= 72" class="badge badge-warning">15:00-17:00</span>
+              <span *ngIf="row.index >= 72" class="badge badge-warning">17:00-19:00</span>
+              <span *ngIf="row.type === 'ETTH'" class="badge badge-danger">{{ row.type }}</span>
+              <span *ngIf="row.type === 'PON'" class="badge badge-primary">{{ row.type }}</span>
+              <br>
+              {{ row.city }}, {{ row.street }}
+              <br>
+              {{ row.description }}
+      
+              <hr>
+            </div>
+          </div>
+        </article>
+
+    </div>
+
+    <div class="col-md-4 col-12">
+        <article class="message is-dark" *ngIf="calendar2 && rybnik">
+            <div class="message-header">
+              Rybnik - {{ rybnik.length }}
+            </div>
+            <div class="message-body">
+              {{ rybnik.value }}
+        
+              <div *ngFor="let row of rybnik">
+                <span *ngIf="row.index <= 10" class="badge badge-warning">09:00-11:00</span>
+                <span *ngIf="row.index >= 10 && row.index <= 35" class="badge badge-warning">11:00-13:00</span>
+                <span *ngIf="row.index >= 35 && row.index <= 55" class="badge badge-warning">13:00-15:00</span>
+                <span *ngIf="row.index >= 55 && row.index <= 72" class="badge badge-warning">15:00-17:00</span>
+                <span *ngIf="row.index >= 72" class="badge badge-warning">17:00-19:00</span>
+                <span *ngIf="row.type === 'ETTH'" class="badge badge-danger">{{ row.type }}</span>
+                <span *ngIf="row.type === 'PON'" class="badge badge-primary">{{ row.type }}</span>
+                <br>
+                {{ row.city }}, {{ row.street }}
+                <br>
+                {{ row.description }}
+        
+                <hr>
+              </div>
+            </div>
+          </article>
+
+      </div>
+
+
+  
+
+  
+
+  
+</div>

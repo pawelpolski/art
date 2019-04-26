@@ -1,0 +1,12 @@
+<h4 class="text-danger">Zwrócone sprzęty:</h4>
+
+<mat-form-field class="full-width">
+  <mat-chip-list #chipList3>
+    <mat-chip *ngFor="let cpe of workorder.returns" [selectable]="selectable" [removable]="removable" (remove)="removeReturns(cpe)">
+      {{cpe}}
+      <mat-icon matChipRemove (click)="removeReturns(cpe)" *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input placeholder="Zwrócone sprzęty" [matChipInputFor]="chipList3" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="addReturns($event)" />
+  </mat-chip-list>
+</mat-form-field>

@@ -1,0 +1,15 @@
+<span *ngIf="workorder.checked === 'Sprawdzone'" matTooltip="Sprawdzone" style="font-size: 1em; color: rgba(81, 197, 3, 0.8);">
+  <!-- <i class="fa fa-check" style="margin-left: 5px;"></i> -->
+👌
+<span *ngIf="workorder.sended" matTooltip="Wysłane / Zatwierdzone" style="font-size: 1em; color: rgba(81, 197, 3, 0.8);">
+    <!-- <i class="fa fa-paper-plane-o" style="margin-left: 5px;"></i> -->
+🔒
+</span>
+<span *ngIf="workorder.toRemove" matTooltip="{{workorder.toRemoveDesc}}" style="font-size: 1em; color: rgba(255, 0, 0, 0.8);">
+    <!-- <i class="fa fa-money" style="margin-left: 5px;"></i> -->
+😡
+</span>
+<span *ngIf="workorder.cpeActivated" matTooltip="Aktywowano sprzęt przez e-mail" style="font-size: 1em; color: rgba(90, 93, 253, 0.8);">
+    <!-- <i class="fa fa-envelope-o" style="margin-left: 5px;"></i> -->
+📧
+</span>

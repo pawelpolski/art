@@ -1,0 +1,44 @@
+<h1 *ngIf="company === 'upc'" style="color: rgba(0, 0, 255, 1);">Zlecenia {{ company.toUpperCase() }} 📺</h1>
+<h1 *ngIf="company === 'netia'" style="color: rgb(238, 89, 238);">Zlecenia {{ company.toUpperCase() }} 📡</h1>
+<h1 *ngIf="company === 'orange'" style="color: rgba(255, 100, 0, 1);">Zlecenia {{ company.toUpperCase() }} 🍊</h1>
+
+<div class="row" >
+  <div class="col-md-12 col-12">
+    <workorders-search [company]="company" (foundWorkorders)="receiveSearchData($event)" (foundCpe)="receiveSearchCpe($event)"></workorders-search>
+  </div>
+  <div class="col-md-12 col-12">
+    <workorders-query [company]="company" (messageQuery)="receiveQuery($event)" (messageQuerySpecial_1)="receiveQuerySpecial_1($event)"
+      (messageQuerySpecial_2)="receiveQuerySpecial_2($event)"></workorders-query>
+  </div>
+  <div class="col-md-1 col-12">
+    
+  </div>
+</div>
+
+<mat-chip color="primary">Zarobiłeś za te zlecenia: {{ownedMoney | number}} zł 💲 </mat-chip>  
+<span class="" (click)=downloadCard()> 💾</span>
+<span class="" (click)=downloadCardAll()> 💾</span>
+
+<hr>
+<cpes-details></cpes-details>
+
+<div *ngIf="cpes as cpe">
+  <ng-container *ngIf="cpe.length; else noCpes">
+    <div *ngFor="let itm of cpe">
+      <cpes-details [cpe]="itm" [company]="company"></cpes-details>
+    </div>
+  </ng-container>
+  <ng-template #noCpes>Brak historii z tego sn! 😿</ng-template>
+</div>
+
+<div *ngIf="workorders as workorder">
+  <ng-container *ngIf="workorder.length; else noItems">
+    <div *ngFor="let item of workorder">
+      <workorders-details [workorder]="item" [company]="company"></workorders-details>
+    </div>
+  </ng-container>
+  <ng-template #noItems>Brak zleceń z tego zapytania! 😿</ng-template>
+</div>
+
+
+<mat-progress-bar *ngIf="showProgressBar" mode="indeterminate"></mat-progress-bar>

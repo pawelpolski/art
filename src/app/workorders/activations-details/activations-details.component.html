@@ -1,0 +1,32 @@
+<div>
+    <h6 class="row">
+        <div class="col-md-1 col-12" (click)="copyValue(activation.client)">
+            <span class="tag is-link full-width">Id: {{ activation.client }}</span>
+        </div>
+        <div *ngIf="activation.date" class="col-md-2 col-6 full-width">
+            {{ activation.date.toDate() | date:'d-MM-yyyy HH:mm' }}
+        </div>
+        <div class="col-md-2 col-6">
+            {{ activation.principal }}
+        </div>
+        <div *ngIf="activation.cpe != 'Proszę odnowić dzierżawę';" class="col-md-4 col-12">
+            <span *ngFor="let cpe of activation.cpe; index as i;" (click)="copyValue(cpe)">
+                <span class="tag is-light">{{ i + 1 }}</span>
+                <span class="tag is-link">{{ cpe }}</span>
+            </span>
+        </div>
+        <div *ngIf="activation.cpe === 'Proszę odnowić dzierżawę';" class="col-md-4 col-12">
+
+            <span class="tag is-dark">Proszę odnowić dzierżawę</span>
+        </div>
+        
+        <div class="col-md-1 col-6">
+            <span class="button is-small full-width" routerLink="../netia/workorder/{{ activation.wo_id }}">Otwórz</span>
+
+        </div>
+        <div *ngIf="loggedUserIn.isAdmin" class="col-md-1 col-6">
+            <span class="button is-small full-width" (click)="setCpeAsActivated()">Aktywowane</span>
+        </div>
+    </h6>
+    <hr>
+</div>

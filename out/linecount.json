@@ -1,0 +1,1583 @@
+{
+    "extension": "linecount",
+    "version": "0.1.7",
+    "workspace": "c:\\Users\\DELL\\Dropbox\\devprojects\\ART_System_Angular7",
+    "linecount": [
+        {
+            "version": "0.1.7",
+            "counttime": "2019-03-14 09:58:02",
+            "filesum": 255,
+            "codesum": 29856,
+            "commentsum": 1277,
+            "blanksum": 1244,
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": ".angulardoc.json"
+                },
+                {
+                    "blank": 4,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": ".circleci\\config.yml"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 1,
+                    "filename": ".editorconfig"
+                },
+                {
+                    "blank": 0,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": ".firebase\\hosting.ZGlzdA.cache"
+                },
+                {
+                    "blank": 0,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": ".firebase\\hosting.ZGlzdFxmaXJlc3RhcnRlcg.cache"
+                },
+                {
+                    "blank": 1,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": ".firebaserc"
+                },
+                {
+                    "blank": 6,
+                    "code": 20,
+                    "comment": 20,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 7,
+                    "code": 135,
+                    "comment": 0,
+                    "filename": "angular.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "cypress.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "cypress\\fixtures\\example.json"
+                },
+                {
+                    "blank": 29,
+                    "code": 48,
+                    "comment": 11,
+                    "filename": "cypress\\integration\\sample.spec.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 6,
+                    "filename": "cypress\\plugins\\index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 25,
+                    "filename": "cypress\\support\\commands.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 1,
+                    "comment": 17,
+                    "filename": "cypress\\support\\index.js"
+                },
+                {
+                    "blank": 136,
+                    "code": 454,
+                    "comment": 4,
+                    "filename": "dist\\firestarter\\3rdpartylicenses.txt"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "dist\\firestarter\\4.32cf20a072ec4b9f8015.js"
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\icons\\icon-128x128.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\icons\\icon-144x144.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\icons\\icon-152x152.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\icons\\icon-192x192.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\icons\\icon-384x384.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\icons\\icon-512x512.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\icons\\icon-72x72.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\icons\\icon-96x96.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\angularfirebase.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\icons\\icon-128x128.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\icons\\icon-144x144.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\icons\\icon-152x152.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\icons\\icon-192x192.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\icons\\icon-384x384.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\icons\\icon-512x512.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\icons\\icon-72x72.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\assets\\images\\icons\\icon-96x96.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "dist\\firestarter\\favicon.ico",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 6,
+                    "comment": 4,
+                    "filename": "dist\\firestarter\\firebase-messaging-sw.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "dist\\firestarter\\index.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "dist\\firestarter\\main.12335fa539dea12494cc.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 52,
+                    "comment": 0,
+                    "filename": "dist\\firestarter\\manifest.json"
+                },
+                {
+                    "blank": 21,
+                    "code": 1780,
+                    "comment": 912,
+                    "filename": "dist\\firestarter\\ngsw-worker.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 91,
+                    "comment": 0,
+                    "filename": "dist\\firestarter\\ngsw.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "dist\\firestarter\\polyfills.cdc9116bea3d757329b3.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "dist\\firestarter\\runtime.de870351c9ffd44046a0.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 6,
+                    "comment": 8,
+                    "filename": "dist\\firestarter\\safety-worker.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 5,
+                    "filename": "dist\\firestarter\\styles.a36045b041f9ece84220.css"
+                },
+                {
+                    "blank": 3,
+                    "code": 6,
+                    "comment": 8,
+                    "filename": "dist\\firestarter\\worker-basic.min.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 32,
+                    "comment": 3,
+                    "filename": "dist\\index.html"
+                },
+                {
+                    "blank": 2,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "firebase.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 3054,
+                    "comment": 0,
+                    "filename": "functions\\package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "functions\\package.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "functions\\src\\index.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "functions\\tsconfig.json"
+                },
+                {
+                    "blank": 36,
+                    "code": 37,
+                    "comment": 48,
+                    "filename": "functions\\tslint.json"
+                },
+                {
+                    "blank": 2,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "ngsw-config.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 18775,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 83,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 18,
+                    "code": 40,
+                    "comment": 6,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 6,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "src\\app\\app-routing.module.ts"
+                },
+                {
+                    "blank": 6,
+                    "code": 49,
+                    "comment": 0,
+                    "filename": "src\\app\\app.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\app.component.scss"
+                },
+                {
+                    "blank": 1,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "src\\app\\app.component.spec.ts"
+                },
+                {
+                    "blank": 8,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "src\\app\\app.component.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 56,
+                    "comment": 4,
+                    "filename": "src\\app\\app.module.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "src\\app\\app.server.module.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "src\\app\\core\\auth.guard.spec.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "src\\app\\core\\auth.guard.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\app\\core\\auth.service.spec.ts"
+                },
+                {
+                    "blank": 12,
+                    "code": 86,
+                    "comment": 6,
+                    "filename": "src\\app\\core\\auth.service.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\app\\core\\core.module.spec.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\app\\core\\core.module.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\app\\core\\notify.service.spec.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": "src\\app\\core\\notify.service.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\netia\\netia.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\netia\\netia.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\netia\\netia.component.spec.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\netia\\netia.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\orange\\orange.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\orange\\orange.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\orange\\orange.component.spec.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\orange\\orange.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\upc\\upc.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\upc\\upc.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\upc\\upc.component.spec.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\app\\dashboard\\upc\\upc.component.ts"
+                },
+                {
+                    "blank": 24,
+                    "code": 63,
+                    "comment": 0,
+                    "filename": "src\\app\\data-transfer.service.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 70,
+                    "comment": 0,
+                    "filename": "src\\app\\material.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\app\\models\\Client.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\app\\models\\Cpe.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "src\\app\\models\\EachCode.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "src\\app\\models\\Settings.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\app\\models\\User.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "src\\app\\models\\Workorder.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\note-detail\\note-detail.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\note-detail\\note-detail.component.scss"
+                },
+                {
+                    "blank": 6,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\note-detail\\note-detail.component.spec.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\note-detail\\note-detail.component.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\notes-list\\notes-list.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\notes-list\\notes-list.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\notes-list\\notes-list.component.spec.ts"
+                },
+                {
+                    "blank": 6,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\notes-list\\notes-list.component.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\notes.module.spec.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\notes.module.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\app\\notes\\notes.service.spec.ts"
+                },
+                {
+                    "blank": 10,
+                    "code": 43,
+                    "comment": 1,
+                    "filename": "src\\app\\notes\\notes.service.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\app\\services\\fcm.service.spec.ts"
+                },
+                {
+                    "blank": 10,
+                    "code": 60,
+                    "comment": 2,
+                    "filename": "src\\app\\services\\fcm.service.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\app\\services\\needed-data.service.spec.ts"
+                },
+                {
+                    "blank": 13,
+                    "code": 43,
+                    "comment": 0,
+                    "filename": "src\\app\\services\\needed-data.service.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\home-page\\home-page.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\home-page\\home-page.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\home-page\\home-page.component.spec.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\home-page\\home-page.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\loading-spinner\\loading-spinner.component.html"
+                },
+                {
+                    "blank": 8,
+                    "code": 44,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\loading-spinner\\loading-spinner.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\loading-spinner\\loading-spinner.component.spec.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\loading-spinner\\loading-spinner.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\main-nav\\main-nav.component.html"
+                },
+                {
+                    "blank": 3,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\main-nav\\main-nav.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\main-nav\\main-nav.component.spec.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\main-nav\\main-nav.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\notification-message\\notification-message.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\notification-message\\notification-message.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\notification-message\\notification-message.component.spec.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\notification-message\\notification-message.component.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\ui.module.spec.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\ui.module.ts"
+                },
+                {
+                    "blank": 15,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-form\\user-form.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-form\\user-form.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-form\\user-form.component.spec.ts"
+                },
+                {
+                    "blank": 13,
+                    "code": 78,
+                    "comment": 5,
+                    "filename": "src\\app\\ui\\user-form\\user-form.component.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-login\\user-login.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-login\\user-login.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-login\\user-login.component.spec.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 16,
+                    "comment": 1,
+                    "filename": "src\\app\\ui\\user-login\\user-login.component.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 15,
+                    "comment": 5,
+                    "filename": "src\\app\\ui\\user-profile\\user-profile.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-profile\\user-profile.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-profile\\user-profile.component.spec.ts"
+                },
+                {
+                    "blank": 6,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "src\\app\\ui\\user-profile\\user-profile.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\cpes-details\\cpes-details.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\cpes-details\\cpes-details.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\cpes-details\\cpes-details.component.spec.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\cpes-details\\cpes-details.component.ts"
+                },
+                {
+                    "blank": 23,
+                    "code": 98,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\cpes.service.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 120,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-details\\memories-details.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-details\\memories-details.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-details\\memories-details.component.spec.ts"
+                },
+                {
+                    "blank": 19,
+                    "code": 77,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-details\\memories-details.component.ts"
+                },
+                {
+                    "blank": 11,
+                    "code": 59,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-list\\memories-list.component.html"
+                },
+                {
+                    "blank": 1,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-list\\memories-list.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-list\\memories-list.component.spec.ts"
+                },
+                {
+                    "blank": 16,
+                    "code": 56,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-list\\memories-list.component.ts"
+                },
+                {
+                    "blank": 8,
+                    "code": 52,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-modal\\memories-modal.component.html"
+                },
+                {
+                    "blank": 1,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-modal\\memories-modal.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-modal\\memories-modal.component.spec.ts"
+                },
+                {
+                    "blank": 12,
+                    "code": 63,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories-modal\\memories-modal.component.ts"
+                },
+                {
+                    "blank": 39,
+                    "code": 181,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\memories.service.ts"
+                },
+                {
+                    "blank": 9,
+                    "code": 56,
+                    "comment": 8,
+                    "filename": "src\\app\\workorders\\ui-pieces\\codes\\codes.component.html"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\codes\\codes.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\codes\\codes.component.spec.ts"
+                },
+                {
+                    "blank": 20,
+                    "code": 121,
+                    "comment": 1,
+                    "filename": "src\\app\\workorders\\ui-pieces\\codes\\codes.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\equipments\\equipments.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\equipments\\equipments.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\equipments\\equipments.component.spec.ts"
+                },
+                {
+                    "blank": 11,
+                    "code": 37,
+                    "comment": 14,
+                    "filename": "src\\app\\workorders\\ui-pieces\\equipments\\equipments.component.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 15,
+                    "comment": 1,
+                    "filename": "src\\app\\workorders\\ui-pieces\\infobox\\infobox.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\infobox\\infobox.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\infobox\\infobox.component.spec.ts"
+                },
+                {
+                    "blank": 11,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\infobox\\infobox.component.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\location\\location.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\location\\location.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\location\\location.component.spec.ts"
+                },
+                {
+                    "blank": 16,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\location\\location.component.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\removes\\removes.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\removes\\removes.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\removes\\removes.component.spec.ts"
+                },
+                {
+                    "blank": 10,
+                    "code": 38,
+                    "comment": 2,
+                    "filename": "src\\app\\workorders\\ui-pieces\\removes\\removes.component.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 4,
+                    "comment": 2,
+                    "filename": "src\\app\\workorders\\ui-pieces\\single-memories\\single-memories.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\single-memories\\single-memories.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\single-memories\\single-memories.component.spec.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\single-memories\\single-memories.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\status\\status.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\status\\status.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\status\\status.component.spec.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\ui-pieces\\status\\status.component.ts"
+                },
+                {
+                    "blank": 25,
+                    "code": 163,
+                    "comment": 31,
+                    "filename": "src\\app\\workorders\\workorder\\workorder.component.html"
+                },
+                {
+                    "blank": 1,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorder\\workorder.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorder\\workorder.component.spec.ts"
+                },
+                {
+                    "blank": 53,
+                    "code": 275,
+                    "comment": 3,
+                    "filename": "src\\app\\workorders\\workorder\\workorder.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-add\\workorders-add.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-add\\workorders-add.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-add\\workorders-add.component.spec.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-add\\workorders-add.component.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-details\\workorders-details.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-details\\workorders-details.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-details\\workorders-details.component.spec.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-details\\workorders-details.component.ts"
+                },
+                {
+                    "blank": 6,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-list\\workorders-list.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-list\\workorders-list.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-list\\workorders-list.component.spec.ts"
+                },
+                {
+                    "blank": 30,
+                    "code": 162,
+                    "comment": 3,
+                    "filename": "src\\app\\workorders\\workorders-list\\workorders-list.component.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 50,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-query\\workorders-query.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-query\\workorders-query.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-query\\workorders-query.component.spec.ts"
+                },
+                {
+                    "blank": 15,
+                    "code": 94,
+                    "comment": 1,
+                    "filename": "src\\app\\workorders\\workorders-query\\workorders-query.component.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-search\\workorders-search.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-search\\workorders-search.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-search\\workorders-search.component.spec.ts"
+                },
+                {
+                    "blank": 8,
+                    "code": 42,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-search\\workorders-search.component.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 4,
+                    "filename": "src\\app\\workorders\\workorders-status-icons\\workorders-status-icons.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-status-icons\\workorders-status-icons.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-status-icons\\workorders-status-icons.component.spec.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-status-icons\\workorders-status-icons.component.ts"
+                },
+                {
+                    "blank": 8,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-type-badges\\workorders-type-badges.component.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-type-badges\\workorders-type-badges.component.scss"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-type-badges\\workorders-type-badges.component.spec.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders-type-badges\\workorders-type-badges.component.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 77,
+                    "comment": 0,
+                    "filename": "src\\app\\workorders\\workorders.module.ts"
+                },
+                {
+                    "blank": 43,
+                    "code": 304,
+                    "comment": 6,
+                    "filename": "src\\app\\workorders\\workorders.service.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\assets\\.gitkeep"
+                },
+                {
+                    "filename": "src\\assets\\icons\\icon-128x128.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\icons\\icon-144x144.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\icons\\icon-152x152.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\icons\\icon-192x192.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\icons\\icon-384x384.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\icons\\icon-512x512.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\icons\\icon-72x72.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\icons\\icon-96x96.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\angularfirebase.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\icons\\icon-128x128.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\icons\\icon-144x144.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\icons\\icon-152x152.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\icons\\icon-192x192.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\icons\\icon-384x384.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\icons\\icon-512x512.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\icons\\icon-72x72.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\images\\icons\\icon-96x96.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 1,
+                    "filename": "src\\browserslist"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\environments\\environment.prod.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 10,
+                    "filename": "src\\environments\\environment.ts"
+                },
+                {
+                    "filename": "src\\favicon.ico",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 6,
+                    "comment": 4,
+                    "filename": "src\\firebase-messaging-sw.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "src\\index.html"
+                },
+                {
+                    "blank": 1,
+                    "code": 28,
+                    "comment": 3,
+                    "filename": "src\\karma.conf.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "src\\main.server.ts"
+                },
+                {
+                    "blank": 6,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\main.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 52,
+                    "comment": 0,
+                    "filename": "src\\manifest.json"
+                },
+                {
+                    "blank": 15,
+                    "code": 2,
+                    "comment": 64,
+                    "filename": "src\\polyfills.ts"
+                },
+                {
+                    "blank": 23,
+                    "code": 148,
+                    "comment": 9,
+                    "filename": "src\\styles.scss"
+                },
+                {
+                    "blank": 3,
+                    "code": 13,
+                    "comment": 4,
+                    "filename": "src\\test.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\tsconfig.app.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\tsconfig.server.json"
+                },
+                {
+                    "blank": 3,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "src\\tsconfig.spec.json"
+                },
+                {
+                    "blank": 2,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "src\\tslint.json"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "tsconfig.json"
+                },
+                {
+                    "blank": 12,
+                    "code": 118,
+                    "comment": 0,
+                    "filename": "tslint.json"
+                },
+                {
+                    "blank": 2,
+                    "code": 31,
+                    "comment": 2,
+                    "filename": "webpack.prerender.config.js"
+                }
+            ]
+        }
+    ]
+}

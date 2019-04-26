@@ -1,0 +1,7 @@
+
+<div class="notification">
+    <button *ngIf="mem.creator === loggedUserIn.name" (click)="removeMem()" class="delete"></button>
+<!--     
+    <span *ngIf="mem.creator != loggedUserIn.name">{{loggedUserIn.icon}}</span> -->
+    {{ mem.description }} 
+  </div>

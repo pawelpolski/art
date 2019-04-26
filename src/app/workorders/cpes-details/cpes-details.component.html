@@ -1,0 +1,24 @@
+<div *ngIf="cpe">
+    <h6 class="row">
+        <div class="col-md-2 col-12">
+            {{ cpe.status }}
+        </div>
+        <div class="col-md-1 col-12">
+            <span *ngIf="cpe.date">{{ cpe.date.toDate() | date:'d-MM-yyyy' }}</span>
+        </div>        
+        <div class="col-md-2 col-12">
+            {{ cpe.type }}
+        </div>
+        <div class="col-md-1 col-12">
+            <span *ngIf="cpe.deliveryDate">{{ cpe.deliveryDate.toDate() | date:'d-MM-yyyy' }}</span>
+        </div>
+        <div class="col-md-4 col-12">
+            {{ cpe.location }}
+        </div>
+        <div *ngIf="cpe.lastWo" class="col-md-2 col-12">
+            <button mat-stroked-button class="is-small btn-block" routerLink="../workorder/{{ cpe.lastWo }}" color="primary">🔍
+              Otwórz</button>
+        </div>
+    </h6>
+    <hr>
+</div>

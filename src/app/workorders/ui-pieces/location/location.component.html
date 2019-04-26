@@ -1,0 +1,13 @@
+<mat-form-field *ngIf="multiple" class="full-width">
+  <mat-select [disabled]="disabled" placeholder="Technik"  [(ngModel)]="location" multiple="{{ multiple }}">
+    <mat-option  (click)="sendLocationToParent()" *ngFor="let location of neededData.users" [value]="location.name.toUpperCase()">{{location.name.toUpperCase()}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<mat-form-field *ngIf="!multiple" class="full-width">
+    <mat-select [disabled]="disabled" placeholder="Technik"  [(ngModel)]="location">
+      <mat-option  (click)="sendLocationToParent()" *ngFor="let location of neededData.users" [value]="location.name.toUpperCase()">{{location.name.toUpperCase()}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  

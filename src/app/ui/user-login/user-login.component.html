@@ -1,0 +1,15 @@
+<h1>Logowanie ART System</h1>
+
+<hr>
+
+<div *ngIf="!(auth.user | async); else alreadyLoggedIn" class="columns">
+
+    <user-form class="column is-6 is-offset-3"></user-form>
+
+</div>
+
+<ng-template #alreadyLoggedIn>
+  <p class="text-success">
+    Jesteś zalogowany <i class="fa fa-thumbs-up"></i>
+  </p>
+</ng-template>

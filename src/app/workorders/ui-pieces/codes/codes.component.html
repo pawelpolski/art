@@ -1,0 +1,73 @@
+<div class="row">
+
+  <!-- ROW 1  -->
+  <div class="col-md-10 col-12">
+    <mat-form-field class="chip-list">
+      <mat-chip-list #chipList>
+        <div *ngFor="let code of workorder.codes">
+          <mat-chip [ngStyle]="{'background-selected color':code.status == 'ok' ? '' : 'red' }" [selectable]="selectable"
+            [removable]="removable" (remove)="remove(code)">
+            {{code.name}}
+            <mat-icon matChipRemove (click)="remove(code)" *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+        </div>
+        <input placeholder="Wpisz kody..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field>
+  </div>
+  <div *ngIf="workorder.locations.length > 0" class="col-md-2 col-4">
+    <mat-chip selected color="primary" selected>{{ workorder.value | number }} zł</mat-chip>    
+  </div>
+
+  <!-- ROW 2  -->
+  <div class="col-md-12 col-12">
+
+    <!-- SERWIS DYŻUR -->
+    <div *ngIf="workorder.type === 'Serwis' && loggedUserIn.canAdd">
+        <mat-chip (click)="setCanceled('DYŻUR_100')" selected color="primary">Dyżur 100 zł</mat-chip>
+        <mat-chip (click)="setCanceled('DYŻUR_150')" selected color="primary">Dyżur 150 zł</mat-chip>
+        <mat-chip (click)="addCode('WYJAZD')" selected color="primary">Wyjazd</mat-chip>
+        <mat-chip (click)="addCode('X2')" selected color="primary">Kęty/Brzeszcze</mat-chip>
+    </div>
+
+    <!-- NETIA  -->
+    <div *ngIf="workorder.type.substr(0,4) === 'FTTH'">
+        <mat-chip *ngIf="workorder.type != 'FTTH/DEMONTAŻ'" (click)="setCanceled('FTTH')" selected color="primary">FTTH</mat-chip>
+        <mat-chip *ngIf="workorder.type === 'FTTH/DEMONTAŻ' || workorder.type === 'FTTH/DEMONTAŻ URZĄDZEŃ' " (click)="setCanceled('FTTH-DEMONTAŻ')" selected color="primary">FTTH-DEMONTAŻ</mat-chip>
+    </div>
+
+    <!-- INTERNETIA  -->
+    <div *ngIf="workorder.type.substr(0,4) === 'ETTH'">
+        <mat-chip *ngIf="workorder.type != 'ETTH/INSTALACJA'" (click)="setCanceled('ETTH-DOSPRZEDAŻ')" selected color="warn">ETTH-DOSPRZEDAŻ</mat-chip>
+        <mat-chip *ngIf="workorder.type === 'ETTH/INSTALACJA'" (click)="setCanceled('ETTH-NOWA')" selected color="warn">ETTH-NOWA</mat-chip>
+    </div>
+
+    <!-- ALL to be canceled -->
+    <div *ngIf="workorder.type === 'CN' || workorder.type === 'CH' || workorder.type.substr(0,4) === 'FTTH' || workorder.type.substr(0,4) === 'ETTH'">
+      <mat-chip (click)="setCanceled('4KN')" selected color="warn">Klient nieobecny</mat-chip>
+      <mat-chip (click)="setCanceled('1WR')" selected color="warn">Rezygnacja</mat-chip>
+      <mat-chip (click)="setCanceled('10Z')" selected color="warn">Zmiana terminu</mat-chip>
+      <mat-chip (click)="setCanceled('9BU')" selected color="warn">Brak upoważnienia</mat-chip>
+      <mat-chip (click)="setCanceled('3T1')" selected color="warn">Wymagana zgoda z adm.</mat-chip>
+      <mat-chip (click)="setCanceled('5UK')" selected color="warn">Klient nie ma TV</mat-chip>
+      <mat-chip (click)="setCanceled('7BZ')" selected color="warn">Brak zgody na nowy kabel</mat-chip>
+      <mat-chip (click)="setCanceled('8I2')" selected color="warn">Błędnie umówione PH</mat-chip>
+      <mat-chip (click)="setCanceled('8I3')" selected color="warn">Klient nic nie zamawiał</mat-chip>
+      <mat-chip (click)="setCanceled('12W')" selected color="warn">Zadłużenie</mat-chip>
+    </div>
+
+    <!-- UPC DS -->
+    <div *ngIf="workorder.type === 'DS'">
+      <mat-chip (click)="setQDSZOB()" selected color="primary">QDS,ZOB</mat-chip>
+      <mat-chip (click)="setQDSZOF()" selected color="primary">QDS,ZOF</mat-chip>
+      <mat-chip (click)="setCanceled('3T5')" selected color="warn">Wielokrotna próba</mat-chip>
+      <mat-chip (click)="setCanceled('1WR')" selected color="warn">Wykonane wcześniej/nowy klient na adresie</mat-chip>
+    </div>
+
+    <!-- ORANGE  -->
+    <div *ngIf="workorder.type === 'ORANGE'">
+
+    </div>
+  </div>
+</div>

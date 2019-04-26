@@ -1,0 +1,32 @@
+<div>
+    <workorders-type-badges [workorder]="workorder"></workorders-type-badges>
+
+    <h6 class="row">
+        <div class="col-md-1 col-6">
+            Wo: {{ workorder.wo }}
+        </div>
+        <div class="col-md-1 col-6">
+            Id: {{ workorder.client }}
+        </div>
+        <div *ngIf="workorder.date" class="col-md-1 col-6">
+            {{ workorder.date.toDate() | date:'d-MM-yyyy' }}
+        </div>
+        <div class="col-md-1 col-6">
+            {{ workorder.value | number }} zł
+        </div>
+        <div class="col-md-3 col-12">
+            {{ workorder.city }}, {{ workorder.street }} {{ workorder.home }}/{{ workorder.locale }}
+        </div>
+        <div  class="col-md-2 col-8">
+            {{ workorder.location }}
+        </div>
+        <div  class="col-md-1 col-4">
+            <workorders-status-icons [workorder]="workorder"></workorders-status-icons>
+        </div>
+        <div  class="col-md-2 col-12">
+            <button mat-stroked-button class="is-small btn-block" routerLink="../workorder/{{ workorder.wo_id }}" color="primary">🔍
+                Otwórz</button>
+        </div>
+    </h6>
+    <hr>
+</div>

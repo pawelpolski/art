@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-md-12 col-12">
+    <article *ngIf="memo.type === 'client_mem' || memo.type === 'wo_mem' " class="message is-info">
+      <div class="message-body">
+        <div class="row">
+          <div class="col-md-12 col-12">
+            {{ memo.description }}
+            <br>
+            <hr>
+          </div>
+          <div class="col-md-12 col-12">
+            <i>{{ memo.lastChange.toDate() | date:'d-MM-yyyy H:mm:ss' }} - {{ memo.creator }}{{ memo.icon }} - Id: {{
+              memo.client }}
+              <span class="badge badge-info">{{ memo.company }}</span>
+            </i>
+          </div>
+          <div class="col-md-12 col-12">
+            <span matTooltip="Pokaż to zlecenie" routerLink="../{{ memo.company }}/workorder/{{ memo.wo_id }}">
+              <a class="button is-primary is-small">Otwórz</a></span>
+              <!-- <button mat-raised-button matTooltip="Pokaż to zlecenie" routerLink="../{{ memo.company }}/workorder/{{ memo.wo_id }}">Otwórz</button> -->
+            <!-- <span *ngIf="!memo.done && memo.creator === loggedUserIn.name || loggedUserIn.isAdmin"
+              matTooltip="Oznacz jako załatwione" (click)="setAsDoneWo(memo.id)">
+              <a class="button is-success is-small">Zrobione</a></span> -->
+            <span matTooltip="Usuń" *ngIf="memo.creator === loggedUserIn.name || loggedUserIn.isAdmin"
+              (click)="setAsDoneWo(memo.id)">
+              <a class="button is-danger is-small">Usuń</a></span>
+              <!-- <button mat-raised-button matTooltip="Usuń" *ngIf="memo.creator === loggedUserIn.name || loggedUserIn.isAdmin" -->
+              <!-- (click)="setAsDoneWo(memo.id)">Usuń</button> -->
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+
+  <div class="col-md-12 col-12">
+    <article *ngIf="memo.type === 'future'"
+      [ngClass]="memo.whoRead.includes(loggedUserIn.name) ? 'is-success' : 'is-danger'" class="message">
+      <div class="message-body">
+        <div class="row">
+          <div class="col-md-12 col-12">
+            {{ memo.description }}
+            <br>
+            <span *ngFor="let comment of memo.comments">
+              <span class="tag is-light is-small" matTooltip="{{ comment.creator }}">{{ comment.description }}
+                {{ comment.icon }}
+                <button *ngIf="memo.creator === loggedUserIn.name || loggedUserIn.isAdmin"
+                  (click)="removeComment(memo.id)" class="delete is-small"></button></span>
+            </span>
+            <hr>
+          </div>
+          <div class="col-md-8 col-12">
+            <i>Zaplanowane na: {{ memo.toBeDoneDate.toDate() | date:'d-MM-yyyy' }} - {{ memo.creator }}{{ memo.icon }}
+              <span *ngIf="memo.person" matTooltip="{{ memo.person }}"> // Dotyczy</span>
+              <span *ngIf="memo.doneByPerson.includes(loggedUserIn.name)" matTooltip="{{ memo.doneByPerson }}"> //
+                Wykonał</span>
+              <!-- <span *ngIf="memo.whoRead.includes(loggedUserIn.name)" matTooltip="{{ memo.whoRead }}"> // Przeczytał</span> -->
+            </i>
+          </div>
+          <div class="col-md-4 col-12">
+              <span *ngIf="memo.wo_id" matTooltip="Pokaż to zlecenie"
+              routerLink="../{{ memo.company }}/workorder/{{ memo.wo_id }}"><a
+                class="button is-primary is-small">Otwórz</a></span>
+              <span *ngIf="!memo.whoRead.includes(loggedUserIn.name)" matTooltip="Oznacz jako odczytane"
+              (click)="readMem(memo.id)">
+              <a class="button is-success is-small">Odczytane</a></span>
+            <!-- <span *ngIf="!memo.doneByPerson.includes(loggedUserIn.name)" matTooltip="Oznacz jako załatwione"
+              (click)="setAsDone(memo.id)"><a class="button is-success is-small">Odczytane</a></span> -->
+            <span matTooltip="Dodaj wo_id..." *ngIf="(memo.creator === loggedUserIn.name || loggedUserIn.isAdmin) && memo.wo_id === ''" (click)="addWoId(memo.id)"><a class="button is-primary is-small">Dodaj Wo_Id</a></span>
+            <span matTooltip="Dodaj komentarz..." (click)="addComment(memo.id)"><a class="button is-warning is-small">Skomentuj</a></span>
+            <span matTooltip="Usuń" *ngIf="memo.creator === loggedUserIn.name || loggedUserIn.isAdmin"
+              (click)="setAsDoneWo(memo.id)"><a class="button is-danger is-small">Usuń</a></span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="col-md-12 col-12">
+    <article *ngIf="memo.type === 'person'"
+      [ngClass]="memo.whoRead.includes(loggedUserIn.name) ? 'is-success' : 'is-danger'" class="message">
+      <div class="message-body">
+        <div class="row">
+          <div class="col-md-12 col-12">
+            {{ memo.description }}
+            <br>
+            <span *ngFor="let comment of memo.comments">
+              <span class="tag is-light is-small" matTooltip="{{ comment.creator }}">{{ comment.description }}
+                {{ comment.icon }}
+                <button *ngIf="memo.creator === loggedUserIn.name || loggedUserIn.isAdmin"
+                  (click)="removeComment(memo.id, comment)" class="delete is-small"></button>
+              </span>
+            </span>
+            <hr>
+          </div>
+          <div class="col-md-8 col-12">
+            <i>{{ memo.lastChange.toDate() | date:'d-MM-yyyy H:mm:ss' }} - {{ memo.creator }}{{ memo.icon }}
+              <span *ngIf="memo.person" matTooltip="{{ memo.person }}"> // Dotyczy</span>
+              <!-- <span *ngIf="memo.doneByPerson.includes(loggedUserIn.name)" matTooltip="{{ memo.doneByPerson }}"> //
+                Wykonał</span> -->
+              <!-- <span *ngIf="memo.whoRead.includes(loggedUserIn.name)" matTooltip="{{ memo.whoRead }}"> // Przeczytał </span> -->
+              <!-- <span *ngIf="memo.wo_id" class="badge badge-info"> {{ memo.company }}</span> -->
+            </i>
+          </div>
+          <div class="col-md-4 col-12">
+            <span *ngIf="memo.wo_id" matTooltip="Pokaż to zlecenie"
+              routerLink="../{{ memo.company }}/workorder/{{ memo.wo_id }}"><a
+                class="button is-primary is-small">Otwórz</a></span>
+            <span *ngIf="!memo.whoRead.includes(loggedUserIn.name)" matTooltip="Oznacz jako odczytane"
+              (click)="readMem(memo.id)">
+              <a class="button is-success is-small">Odczytane</a></span>
+            <!-- <span *ngIf="!memo.doneByPerson.includes(loggedUserIn.name)" matTooltip="Oznacz jako załatwione"
+              (click)="setAsDone(memo.id)"><a class="button is-success is-small">Odczytane</a></span> -->
+            <span matTooltip="Dodaj wo_id..." *ngIf="(memo.creator === loggedUserIn.name || loggedUserIn.isAdmin) && memo.wo_id === ''" (click)="addWoId(memo.id)"><a class="button is-primary is-small">Dodaj Wo_Id</a></span>
+            <span matTooltip="Dodaj komentarz..." (click)="addComment(memo.id)"><a class="button is-warning is-small">Skomentuj</a></span>
+            <span matTooltip="Usuń" *ngIf="memo.creator === loggedUserIn.name || loggedUserIn.isAdmin"
+              (click)="setAsDoneWo(memo.id)"><a class="button is-danger is-small">Usuń</a></span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</div>
+<hr>

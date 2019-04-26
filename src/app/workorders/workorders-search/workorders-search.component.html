@@ -1,0 +1,23 @@
+<mat-form-field class="full-width">
+  <input *ngIf="company != 'netia'" (keyup.enter)="showWorkorders()" matInput
+    placeholder="Podaj zlecenie (wo) lub numer sprzętu (sn)" [(ngModel)]="search" value="">
+  <input *ngIf="company === 'netia'" (keyup.enter)="showWorkorders()" matInput
+    placeholder="Podaj id klienta lub numer sprzętu (sn)" [(ngModel)]="search" value="">
+</mat-form-field>
+
+
+<div class="row">
+  <div class="col-md-2 col-6">
+    <button class="full-width" mat-raised-button color="primary" (click)="showWorkorders()">Szukaj zlecenie</button>
+  </div>
+  <div class="col-md-2 col-6">
+    <button class="full-width" mat-raised-button color="warn" (click)="showCpeHistory()">Historia sprzętu</button>
+  </div>
+  <div class="col-md-2 col-6">
+      <button class="full-width" mat-raised-button color="accent" (click)="showWorkordersByTag()">Szukaj po tagu</button>
+    </div>
+</div>
+
+
+
+<hr>

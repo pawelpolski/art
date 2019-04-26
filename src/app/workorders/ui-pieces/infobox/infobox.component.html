@@ -1,0 +1,27 @@
+<div *ngIf="workorder">
+  <h4 class="text-primary">Informacje:</h4>
+
+  <!-- <workorders-status-icons [workorder]="workorder"></workorders-status-icons> -->
+
+
+  <div *ngIf="workorder.checkedBy" class="tags has-addons full-width row">
+    <span matTooltip="Sprawdzone przez: {{ workorder.checkedBy }}" class="col-md-2 col-2 tag is-info">👌</span>
+    <span class="tag col-md-10 col-10">{{ workorder.checkedBy }}</span>
+  </div>
+  <div *ngIf="workorder.sended" class="tags has-addons full-width row">
+    <span matTooltip="Wysłane do Taurusa" class="col-md-2 col-2 tag is-info">🔒</span>
+    <span class="tag col-md-10 col-10">Wysłane do Taurusa</span>
+  </div>
+  <div *ngIf="workorder.locations.length > 1" class="tags has-addons full-width row">
+    <span  matTooltip="Zlecenie wykonane w kilka osób" class="col-md-2 col-2 tag is-info">💲👬</span>
+    <span class="tag col-md-10 col-10">Kody podzielone na {{workorder.locations.length}} techników</span>
+  </div> 
+  <div *ngFor="let tel of workorder.telephones">
+      <a href="{{ 'tel:'+ tel }}">
+      <div *ngIf="workorder.telephones" class="tags has-addons full-width row">
+          <span matTooltip="Telefon do klienta" class="col-md-2 col-2 tag is-info">📱</span>
+          <span class="tag col-md-10 col-10">tel: {{ tel }}</span>
+        </div>
+        </a>
+  </div>
+</div>

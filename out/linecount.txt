@@ -1,0 +1,267 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2019-03-14 09:58:02
+count workspace : c:\Users\DELL\Dropbox\devprojects\ART_System_Angular7
+total files : 255
+total code lines : 29856
+total comment lines : 1277
+total blank lines : 1244
+
+.angulardoc.json, code is 4, comment is 0, blank is 0.
+.circleci\config.yml, code is 35, comment is 0, blank is 4.
+.editorconfig, code is 11, comment is 1, blank is 2.
+.firebase\hosting.ZGlzdA.cache, code is 29, comment is 0, blank is 0.
+.firebase\hosting.ZGlzdFxmaXJlc3RhcnRlcg.cache, code is 31, comment is 0, blank is 0.
+.firebaserc, code is 13, comment is 0, blank is 1.
+.gitignore, code is 20, comment is 20, blank is 6.
+angular.json, code is 135, comment is 0, blank is 7.
+cypress.json, code is 3, comment is 0, blank is 0.
+cypress\fixtures\example.json, code is 5, comment is 0, blank is 0.
+cypress\integration\sample.spec.js, code is 48, comment is 11, blank is 29.
+cypress\plugins\index.js, code is 2, comment is 6, blank is 1.
+cypress\support\commands.js, code is 8, comment is 25, blank is 2.
+cypress\support\index.js, code is 1, comment is 17, blank is 2.
+dist\firestarter\3rdpartylicenses.txt, code is 454, comment is 4, blank is 136.
+dist\firestarter\4.32cf20a072ec4b9f8015.js, code is 1, comment is 0, blank is 0.
+dist\firestarter\assets\icons\icon-128x128.png, it is a binary file.
+dist\firestarter\assets\icons\icon-144x144.png, it is a binary file.
+dist\firestarter\assets\icons\icon-152x152.png, it is a binary file.
+dist\firestarter\assets\icons\icon-192x192.png, it is a binary file.
+dist\firestarter\assets\icons\icon-384x384.png, it is a binary file.
+dist\firestarter\assets\icons\icon-512x512.png, it is a binary file.
+dist\firestarter\assets\icons\icon-72x72.png, it is a binary file.
+dist\firestarter\assets\icons\icon-96x96.png, it is a binary file.
+dist\firestarter\assets\images\angularfirebase.png, it is a binary file.
+dist\firestarter\assets\images\icons\icon-128x128.png, it is a binary file.
+dist\firestarter\assets\images\icons\icon-144x144.png, it is a binary file.
+dist\firestarter\assets\images\icons\icon-152x152.png, it is a binary file.
+dist\firestarter\assets\images\icons\icon-192x192.png, it is a binary file.
+dist\firestarter\assets\images\icons\icon-384x384.png, it is a binary file.
+dist\firestarter\assets\images\icons\icon-512x512.png, it is a binary file.
+dist\firestarter\assets\images\icons\icon-72x72.png, it is a binary file.
+dist\firestarter\assets\images\icons\icon-96x96.png, it is a binary file.
+dist\firestarter\favicon.ico, it is a binary file.
+dist\firestarter\firebase-messaging-sw.js, code is 6, comment is 4, blank is 3.
+dist\firestarter\index.html, code is 21, comment is 0, blank is 8.
+dist\firestarter\main.12335fa539dea12494cc.js, code is 1, comment is 1, blank is 0.
+dist\firestarter\manifest.json, code is 52, comment is 0, blank is 0.
+dist\firestarter\ngsw-worker.js, code is 1780, comment is 912, blank is 21.
+dist\firestarter\ngsw.json, code is 91, comment is 0, blank is 2.
+dist\firestarter\polyfills.cdc9116bea3d757329b3.js, code is 1, comment is 0, blank is 0.
+dist\firestarter\runtime.de870351c9ffd44046a0.js, code is 1, comment is 0, blank is 0.
+dist\firestarter\safety-worker.js, code is 6, comment is 8, blank is 3.
+dist\firestarter\styles.a36045b041f9ece84220.css, code is 2, comment is 5, blank is 0.
+dist\firestarter\worker-basic.min.js, code is 6, comment is 8, blank is 3.
+dist\index.html, code is 32, comment is 3, blank is 2.
+firebase.json, code is 22, comment is 0, blank is 2.
+functions\package-lock.json, code is 3054, comment is 0, blank is 0.
+functions\package.json, code is 22, comment is 0, blank is 0.
+functions\src\index.ts, code is 0, comment is 0, blank is 0.
+functions\tsconfig.json, code is 14, comment is 0, blank is 1.
+functions\tslint.json, code is 37, comment is 48, blank is 36.
+ngsw-config.json, code is 22, comment is 0, blank is 2.
+package-lock.json, code is 18775, comment is 0, blank is 0.
+package.json, code is 83, comment is 0, blank is 0.
+README.md, code is 40, comment is 6, blank is 18.
+src\app\app-routing.module.ts, code is 27, comment is 0, blank is 6.
+src\app\app.component.html, code is 49, comment is 0, blank is 6.
+src\app\app.component.scss, code is 3, comment is 0, blank is 0.
+src\app\app.component.spec.ts, code is 38, comment is 0, blank is 1.
+src\app\app.component.ts, code is 45, comment is 0, blank is 8.
+src\app\app.module.ts, code is 56, comment is 4, blank is 5.
+src\app\app.server.module.ts, code is 15, comment is 0, blank is 3.
+src\app\core\auth.guard.spec.ts, code is 23, comment is 0, blank is 4.
+src\app\core\auth.guard.ts, code is 38, comment is 0, blank is 2.
+src\app\core\auth.service.spec.ts, code is 11, comment is 0, blank is 3.
+src\app\core\auth.service.ts, code is 86, comment is 6, blank is 12.
+src\app\core\core.module.spec.ts, code is 10, comment is 0, blank is 3.
+src\app\core\core.module.ts, code is 9, comment is 0, blank is 1.
+src\app\core\notify.service.spec.ts, code is 12, comment is 0, blank is 3.
+src\app\core\notify.service.ts, code is 18, comment is 1, blank is 7.
+src\app\dashboard\netia\netia.component.html, code is 1, comment is 0, blank is 0.
+src\app\dashboard\netia\netia.component.scss, code is 0, comment is 0, blank is 0.
+src\app\dashboard\netia\netia.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\dashboard\netia\netia.component.ts, code is 12, comment is 0, blank is 4.
+src\app\dashboard\orange\orange.component.html, code is 1, comment is 0, blank is 0.
+src\app\dashboard\orange\orange.component.scss, code is 0, comment is 0, blank is 0.
+src\app\dashboard\orange\orange.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\dashboard\orange\orange.component.ts, code is 12, comment is 0, blank is 4.
+src\app\dashboard\upc\upc.component.html, code is 1, comment is 0, blank is 0.
+src\app\dashboard\upc\upc.component.scss, code is 0, comment is 0, blank is 0.
+src\app\dashboard\upc\upc.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\dashboard\upc\upc.component.ts, code is 12, comment is 0, blank is 4.
+src\app\data-transfer.service.ts, code is 63, comment is 0, blank is 24.
+src\app\material.ts, code is 70, comment is 0, blank is 3.
+src\app\models\Client.ts, code is 11, comment is 0, blank is 0.
+src\app\models\Cpe.ts, code is 12, comment is 0, blank is 0.
+src\app\models\EachCode.ts, code is 5, comment is 0, blank is 2.
+src\app\models\Settings.ts, code is 5, comment is 0, blank is 1.
+src\app\models\User.ts, code is 12, comment is 0, blank is 2.
+src\app\models\Workorder.ts, code is 39, comment is 0, blank is 2.
+src\app\notes\note-detail\note-detail.component.html, code is 8, comment is 0, blank is 0.
+src\app\notes\note-detail\note-detail.component.scss, code is 3, comment is 0, blank is 0.
+src\app\notes\note-detail\note-detail.component.spec.ts, code is 23, comment is 0, blank is 6.
+src\app\notes\note-detail\note-detail.component.ts, code is 21, comment is 0, blank is 7.
+src\app\notes\notes-list\notes-list.component.html, code is 15, comment is 0, blank is 3.
+src\app\notes\notes-list\notes-list.component.scss, code is 0, comment is 0, blank is 0.
+src\app\notes\notes-list\notes-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\notes\notes-list\notes-list.component.ts, code is 20, comment is 0, blank is 6.
+src\app\notes\notes.module.spec.ts, code is 10, comment is 0, blank is 3.
+src\app\notes\notes.module.ts, code is 17, comment is 0, blank is 2.
+src\app\notes\notes.service.spec.ts, code is 12, comment is 0, blank is 3.
+src\app\notes\notes.service.ts, code is 43, comment is 1, blank is 10.
+src\app\services\fcm.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\fcm.service.ts, code is 60, comment is 2, blank is 10.
+src\app\services\needed-data.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\needed-data.service.ts, code is 43, comment is 0, blank is 13.
+src\app\ui\home-page\home-page.component.html, code is 3, comment is 0, blank is 2.
+src\app\ui\home-page\home-page.component.scss, code is 0, comment is 0, blank is 0.
+src\app\ui\home-page\home-page.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\ui\home-page\home-page.component.ts, code is 19, comment is 0, blank is 5.
+src\app\ui\loading-spinner\loading-spinner.component.html, code is 7, comment is 0, blank is 0.
+src\app\ui\loading-spinner\loading-spinner.component.scss, code is 44, comment is 0, blank is 8.
+src\app\ui\loading-spinner\loading-spinner.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\ui\loading-spinner\loading-spinner.component.ts, code is 11, comment is 0, blank is 4.
+src\app\ui\main-nav\main-nav.component.html, code is 0, comment is 0, blank is 0.
+src\app\ui\main-nav\main-nav.component.scss, code is 11, comment is 0, blank is 3.
+src\app\ui\main-nav\main-nav.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\ui\main-nav\main-nav.component.ts, code is 16, comment is 0, blank is 5.
+src\app\ui\notification-message\notification-message.component.html, code is 5, comment is 0, blank is 0.
+src\app\ui\notification-message\notification-message.component.scss, code is 0, comment is 0, blank is 0.
+src\app\ui\notification-message\notification-message.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\ui\notification-message\notification-message.component.ts, code is 10, comment is 0, blank is 2.
+src\app\ui\ui.module.spec.ts, code is 10, comment is 0, blank is 3.
+src\app\ui\ui.module.ts, code is 33, comment is 0, blank is 3.
+src\app\ui\user-form\user-form.component.html, code is 31, comment is 0, blank is 15.
+src\app\ui\user-form\user-form.component.scss, code is 0, comment is 0, blank is 0.
+src\app\ui\user-form\user-form.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\ui\user-form\user-form.component.ts, code is 78, comment is 5, blank is 13.
+src\app\ui\user-login\user-login.component.html, code is 10, comment is 0, blank is 5.
+src\app\ui\user-login\user-login.component.scss, code is 0, comment is 0, blank is 0.
+src\app\ui\user-login\user-login.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\ui\user-login\user-login.component.ts, code is 16, comment is 1, blank is 5.
+src\app\ui\user-profile\user-profile.component.html, code is 15, comment is 5, blank is 4.
+src\app\ui\user-profile\user-profile.component.scss, code is 0, comment is 0, blank is 0.
+src\app\ui\user-profile\user-profile.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\ui\user-profile\user-profile.component.ts, code is 22, comment is 0, blank is 6.
+src\app\workorders\cpes-details\cpes-details.component.html, code is 24, comment is 0, blank is 0.
+src\app\workorders\cpes-details\cpes-details.component.scss, code is 0, comment is 0, blank is 0.
+src\app\workorders\cpes-details\cpes-details.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\cpes-details\cpes-details.component.ts, code is 13, comment is 0, blank is 5.
+src\app\workorders\cpes.service.ts, code is 98, comment is 0, blank is 23.
+src\app\workorders\memories-details\memories-details.component.html, code is 120, comment is 0, blank is 4.
+src\app\workorders\memories-details\memories-details.component.scss, code is 0, comment is 0, blank is 0.
+src\app\workorders\memories-details\memories-details.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\memories-details\memories-details.component.ts, code is 77, comment is 0, blank is 19.
+src\app\workorders\memories-list\memories-list.component.html, code is 59, comment is 0, blank is 11.
+src\app\workorders\memories-list\memories-list.component.scss, code is 3, comment is 0, blank is 1.
+src\app\workorders\memories-list\memories-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\memories-list\memories-list.component.ts, code is 56, comment is 0, blank is 16.
+src\app\workorders\memories-modal\memories-modal.component.html, code is 52, comment is 0, blank is 8.
+src\app\workorders\memories-modal\memories-modal.component.scss, code is 3, comment is 0, blank is 1.
+src\app\workorders\memories-modal\memories-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\memories-modal\memories-modal.component.ts, code is 63, comment is 0, blank is 12.
+src\app\workorders\memories.service.ts, code is 181, comment is 0, blank is 39.
+src\app\workorders\ui-pieces\codes\codes.component.html, code is 56, comment is 8, blank is 9.
+src\app\workorders\ui-pieces\codes\codes.component.scss, code is 6, comment is 0, blank is 1.
+src\app\workorders\ui-pieces\codes\codes.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\ui-pieces\codes\codes.component.ts, code is 121, comment is 1, blank is 20.
+src\app\workorders\ui-pieces\equipments\equipments.component.html, code is 11, comment is 0, blank is 0.
+src\app\workorders\ui-pieces\equipments\equipments.component.scss, code is 3, comment is 0, blank is 0.
+src\app\workorders\ui-pieces\equipments\equipments.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\ui-pieces\equipments\equipments.component.ts, code is 37, comment is 14, blank is 11.
+src\app\workorders\ui-pieces\infobox\infobox.component.html, code is 15, comment is 1, blank is 4.
+src\app\workorders\ui-pieces\infobox\infobox.component.scss, code is 0, comment is 0, blank is 0.
+src\app\workorders\ui-pieces\infobox\infobox.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\ui-pieces\infobox\infobox.component.ts, code is 22, comment is 0, blank is 11.
+src\app\workorders\ui-pieces\location\location.component.html, code is 10, comment is 0, blank is 2.
+src\app\workorders\ui-pieces\location\location.component.scss, code is 3, comment is 0, blank is 0.
+src\app\workorders\ui-pieces\location\location.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\ui-pieces\location\location.component.ts, code is 39, comment is 0, blank is 16.
+src\app\workorders\ui-pieces\removes\removes.component.html, code is 11, comment is 0, blank is 1.
+src\app\workorders\ui-pieces\removes\removes.component.scss, code is 3, comment is 0, blank is 0.
+src\app\workorders\ui-pieces\removes\removes.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\ui-pieces\removes\removes.component.ts, code is 38, comment is 2, blank is 10.
+src\app\workorders\ui-pieces\single-memories\single-memories.component.html, code is 4, comment is 2, blank is 1.
+src\app\workorders\ui-pieces\single-memories\single-memories.component.scss, code is 0, comment is 0, blank is 0.
+src\app\workorders\ui-pieces\single-memories\single-memories.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\ui-pieces\single-memories\single-memories.component.ts, code is 23, comment is 0, blank is 5.
+src\app\workorders\ui-pieces\status\status.component.html, code is 5, comment is 0, blank is 0.
+src\app\workorders\ui-pieces\status\status.component.scss, code is 3, comment is 0, blank is 0.
+src\app\workorders\ui-pieces\status\status.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\ui-pieces\status\status.component.ts, code is 24, comment is 0, blank is 7.
+src\app\workorders\workorder\workorder.component.html, code is 163, comment is 31, blank is 25.
+src\app\workorders\workorder\workorder.component.scss, code is 3, comment is 0, blank is 1.
+src\app\workorders\workorder\workorder.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\workorder\workorder.component.ts, code is 275, comment is 3, blank is 53.
+src\app\workorders\workorders-add\workorders-add.component.html, code is 3, comment is 0, blank is 0.
+src\app\workorders\workorders-add\workorders-add.component.scss, code is 0, comment is 0, blank is 0.
+src\app\workorders\workorders-add\workorders-add.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\workorders-add\workorders-add.component.ts, code is 11, comment is 0, blank is 4.
+src\app\workorders\workorders-details\workorders-details.component.html, code is 31, comment is 0, blank is 1.
+src\app\workorders\workorders-details\workorders-details.component.scss, code is 0, comment is 0, blank is 0.
+src\app\workorders\workorders-details\workorders-details.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\workorders-details\workorders-details.component.ts, code is 14, comment is 0, blank is 7.
+src\app\workorders\workorders-list\workorders-list.component.html, code is 35, comment is 0, blank is 6.
+src\app\workorders\workorders-list\workorders-list.component.scss, code is 3, comment is 0, blank is 0.
+src\app\workorders\workorders-list\workorders-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\workorders-list\workorders-list.component.ts, code is 162, comment is 3, blank is 30.
+src\app\workorders\workorders-query\workorders-query.component.html, code is 50, comment is 0, blank is 1.
+src\app\workorders\workorders-query\workorders-query.component.scss, code is 3, comment is 0, blank is 0.
+src\app\workorders\workorders-query\workorders-query.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\workorders-query\workorders-query.component.ts, code is 94, comment is 1, blank is 15.
+src\app\workorders\workorders-search\workorders-search.component.html, code is 9, comment is 0, blank is 2.
+src\app\workorders\workorders-search\workorders-search.component.scss, code is 3, comment is 0, blank is 0.
+src\app\workorders\workorders-search\workorders-search.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\workorders-search\workorders-search.component.ts, code is 42, comment is 0, blank is 8.
+src\app\workorders\workorders-status-icons\workorders-status-icons.component.html, code is 11, comment is 4, blank is 0.
+src\app\workorders\workorders-status-icons\workorders-status-icons.component.scss, code is 0, comment is 0, blank is 0.
+src\app\workorders\workorders-status-icons\workorders-status-icons.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\workorders-status-icons\workorders-status-icons.component.ts, code is 13, comment is 0, blank is 5.
+src\app\workorders\workorders-type-badges\workorders-type-badges.component.html, code is 11, comment is 0, blank is 8.
+src\app\workorders\workorders-type-badges\workorders-type-badges.component.scss, code is 0, comment is 0, blank is 0.
+src\app\workorders\workorders-type-badges\workorders-type-badges.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\workorders\workorders-type-badges\workorders-type-badges.component.ts, code is 19, comment is 0, blank is 5.
+src\app\workorders\workorders.module.ts, code is 77, comment is 0, blank is 4.
+src\app\workorders\workorders.service.ts, code is 304, comment is 6, blank is 43.
+src\assets\.gitkeep, code is 0, comment is 0, blank is 0.
+src\assets\icons\icon-128x128.png, it is a binary file.
+src\assets\icons\icon-144x144.png, it is a binary file.
+src\assets\icons\icon-152x152.png, it is a binary file.
+src\assets\icons\icon-192x192.png, it is a binary file.
+src\assets\icons\icon-384x384.png, it is a binary file.
+src\assets\icons\icon-512x512.png, it is a binary file.
+src\assets\icons\icon-72x72.png, it is a binary file.
+src\assets\icons\icon-96x96.png, it is a binary file.
+src\assets\images\angularfirebase.png, it is a binary file.
+src\assets\images\icons\icon-128x128.png, it is a binary file.
+src\assets\images\icons\icon-144x144.png, it is a binary file.
+src\assets\images\icons\icon-152x152.png, it is a binary file.
+src\assets\images\icons\icon-192x192.png, it is a binary file.
+src\assets\images\icons\icon-384x384.png, it is a binary file.
+src\assets\images\icons\icon-512x512.png, it is a binary file.
+src\assets\images\icons\icon-72x72.png, it is a binary file.
+src\assets\images\icons\icon-96x96.png, it is a binary file.
+src\browserslist, code is 9, comment is 1, blank is 0.
+src\environments\environment.prod.ts, code is 11, comment is 0, blank is 0.
+src\environments\environment.ts, code is 11, comment is 10, blank is 2.
+src\favicon.ico, it is a binary file.
+src\firebase-messaging-sw.js, code is 6, comment is 4, blank is 3.
+src\index.html, code is 21, comment is 0, blank is 8.
+src\karma.conf.js, code is 28, comment is 3, blank is 1.
+src\main.server.ts, code is 6, comment is 0, blank is 3.
+src\main.ts, code is 12, comment is 0, blank is 6.
+src\manifest.json, code is 52, comment is 0, blank is 0.
+src\polyfills.ts, code is 2, comment is 64, blank is 15.
+src\styles.scss, code is 148, comment is 9, blank is 23.
+src\test.ts, code is 13, comment is 4, blank is 3.
+src\tsconfig.app.json, code is 11, comment is 0, blank is 1.
+src\tsconfig.server.json, code is 11, comment is 0, blank is 0.
+src\tsconfig.spec.json, code is 16, comment is 0, blank is 3.
+src\tslint.json, code is 15, comment is 0, blank is 2.
+tsconfig.json, code is 18, comment is 0, blank is 2.
+tslint.json, code is 118, comment is 0, blank is 12.
+webpack.prerender.config.js, code is 31, comment is 2, blank is 2.
+===============================================================================

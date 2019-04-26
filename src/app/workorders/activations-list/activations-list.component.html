@@ -1,0 +1,12 @@
+<h1 >Aktywacje sprzętu Netia</h1>
+<hr>
+
+<div *ngIf="activations as activation">
+    <ng-container *ngIf="activation.length; else noItems">
+      <div *ngFor="let activate of activation">
+
+      <activations-details [activation]="activate" ></activations-details>
+      </div>
+    </ng-container>
+    <ng-template #noItems>Brak aktywacji do realizacji! 😎</ng-template>
+  </div>

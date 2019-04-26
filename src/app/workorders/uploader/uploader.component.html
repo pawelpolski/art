@@ -1,0 +1,23 @@
+<div class="file-input" type="file" class="dropzone" 
+     dropzone
+     (hovered)="toggleHover($event)"
+     (dropped)="onDrop($event)"
+     [class.hovering]="isHovering">
+
+
+     <h5>Przerzuć pliki 📁 </h5>
+     <div class="file">
+       <label class="file-label">
+        <input class="file-input" type="file" (change)="onDrop($event.target.files)" multiple name="resume">
+        <h5>lub kliknij</h5>
+       </label>
+     </div>
+     
+</div>
+
+
+<div *ngFor="let file of files">
+  <upload-task [file]="file" [workorder]="workorder"></upload-task>
+</div>
+
+

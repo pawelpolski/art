@@ -1,0 +1,48 @@
+<h1>Ustawienia</h1>
+
+<div class="row">
+  <div class="col-md-2 col-6">
+    <button class="full-width" mat-raised-button (click)="getPermission()">1. Pobierz zgodę</button>
+
+  </div>
+  <div class="col-md-2 col-6">
+    <button class="full-width" mat-raised-button (click)="subscribeToTopic('messaging')">2. Wiadomości push</button>
+
+  </div>
+  <div class="col-md-2 col-6">
+    <button class="full-width" mat-raised-button (click)="subscribeToTopic('memories')">3. Info memorki</button>
+
+  </div>
+  <div class="col-md-2 col-6">
+    <button class="full-width" mat-raised-button (click)="subscribeToTopic('activations')">4. Info aktywacje</button>
+  </div>
+</div>
+<hr>
+
+<uploader [workorder]="workorder"></uploader>
+<hr>
+
+
+<div *ngIf="files | async as file">
+  <div *ngFor="let filez of file">
+    <article class="message is-dark">
+      <div class="message-header">
+        <h5>{{ filez.wo_id }}</h5>
+      </div>
+      <div class="message-body">
+        <span *ngFor="let url of filez.files; index as i">
+          <!-- <img class="photo" [src]="url.downloadURL"> -->
+          <a [href]="url.downloadURL" target="_blank" rel="noopener">
+
+            <span class="tag is-danger">{{ i + 1 }}</span>
+            <span class="tag">Otwórz</span>
+
+          </a>
+        </span>
+      </div>
+    </article>
+  </div>
+</div>
+
+
+

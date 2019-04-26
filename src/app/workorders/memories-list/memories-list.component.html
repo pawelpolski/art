@@ -1,0 +1,68 @@
+<h1>Memorki</h1>
+<div class="row">
+
+
+  <div class="col-md-12 col-12 message is-primary">
+      <div class="message-header">
+          Zaplanowane sprawy:
+          <a (click)="openForm('future')">📝 Dodaj</a>
+      </div>
+      <div *ngIf="memoriesFuture as future">
+        <ng-container *ngIf="future.length; else noItems">
+          <div *ngFor="let fut of future">
+            <memories-details [memo]="fut" [loggedUserIn]="loggedUserIn"></memories-details>
+          </div>
+        </ng-container>
+        <ng-template #noItems>Brak memorek z tego zapytania! 😿</ng-template>
+      </div>
+    </div>
+
+  <div class="col-md-12 col-12 message">
+      <div class="message-header">
+        Dodane do osoby:
+        <a (click)="openForm('person')">📝 Dodaj</a>
+      </div>
+      <div *ngIf="memoriesPerson as memoryPerson">
+        <ng-container *ngIf="memoryPerson.length; else noItems">
+          <div *ngFor="let memP of memoryPerson">
+            <memories-details [memo]="memP" [loggedUserIn]="loggedUserIn"></memories-details>
+          </div>
+        </ng-container>
+        <ng-template #noItems>Brak memorek z tego zapytania! 😿</ng-template>
+      </div>
+    </div>
+
+
+    <div *ngIf="loggedUserIn.isAdmin" class="col-md-6 col-12 message is-info">
+        <div class="message-header">
+          Dodane do klienta:
+        </div>
+        <div *ngIf="memoriesClient as memoryClient">
+          <ng-container *ngIf="memoryClient.length; else noItems">
+            <div *ngFor="let memC of memoryClient">
+              <memories-details [memo]="memC" [loggedUserIn]="loggedUserIn"></memories-details>
+            </div>
+          </ng-container>
+          <ng-template #noItems>Brak memorek z tego zapytania! 😿</ng-template>
+        </div>
+      </div>
+
+      <div *ngIf="loggedUserIn.isAdmin" class="col-md-6 col-12 message is-info">
+        <div class="message-header">
+          Dodane do zlecenia:
+        </div>
+        <div *ngIf="memoriesWo as memoryWo">
+          <ng-container *ngIf="memoryWo.length; else noItems">
+            <div *ngFor="let memW of memoryWo">
+              <memories-details [memo]="memW" [loggedUserIn]="loggedUserIn"></memories-details>
+            </div>
+          </ng-container>
+          <ng-template #noItems>Brak memorek z tego zapytania! 😿</ng-template>
+        </div>
+      </div>
+
+</div>
+
+
+<memories-modal [type]="type" [showForm]="showForm" [loggedUserIn]="loggedUserIn" (formStatus)="formStatus($event)"></memories-modal>
+

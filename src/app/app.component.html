@@ -1,0 +1,93 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer>
+        <h3 class="margin10">Menu</h3>
+        <a class="navbar-item" routerLink="upc/center">
+            Zlecenia UPC
+        </a>
+        <a class="navbar-item" routerLink="netia/center">
+            Zlecenia NETIA
+        </a>
+        <a class="navbar-item" routerLink="orange/center">
+            Zlecenia ORANGE
+        </a>
+        <hr>
+        <h3 class="margin10">Inne</h3>
+        <a class="navbar-item" routerLink="memories">
+            Memorki
+        </a>
+        <a *ngIf="auth.user | async as user">
+            <a *ngIf="user" class="navbar-item" routerLink="sallary">
+                Wypłaty
+            </a>
+        </a>
+        <a *ngIf="auth.user | async as user">
+            <a *ngIf="user" class="navbar-item" routerLink="activations">
+                Aktywacje sprzętu Netia
+            </a>
+        </a>
+        <a *ngIf="auth.user | async as user">
+            <a *ngIf="user" class="navbar-item" routerLink="netia/calendar">
+                Kalendarz Netia
+            </a>
+        </a>
+        <a *ngIf="auth.user | async as user">
+            <a *ngIf="user" class="navbar-item" routerLink="settings">
+                Ustawienia
+            </a>
+        </a>
+        <a *ngIf="auth.user | async as user">
+            <a *ngIf="user" class="navbar-item" routerLink="vindications">
+                Windykacje
+            </a>
+        </a>
+
+
+        <hr>
+    </mat-drawer>
+    <mat-drawer-content>
+
+        <div id="wrapper">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" routerLink="/">
+                        ART System
+                    </a>
+
+                </div>
+                <a *ngIf="activations as activation" class="navbar-item" routerLink="activations">
+                    <mat-icon *ngIf="activation.length" matBadge="{{ activation.length }}" matBadgeColor="warn">feedback
+                    </mat-icon>
+                </a>
+
+
+
+
+                <div class="navbar-end">
+                    <a id="navToggle" role="button" (click)="drawer.toggle()">
+                        <i class="material-icons">
+                            menu
+                        </i>
+                    </a>
+                </div>
+            </nav>
+
+
+
+
+            <div class="columns">
+                <aside class="column is-1">
+                </aside>
+                <main class="column is-10">
+                    <div class="margin10">
+                        <notification-message></notification-message>
+                        <router-outlet></router-outlet>
+
+                    </div>
+                </main>
+            </div>
+            <footer class="footer">
+                <user-profile></user-profile>
+            </footer>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

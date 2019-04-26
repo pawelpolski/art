@@ -1,0 +1,5 @@
+<mat-form-field class="full-width">
+  <mat-select placeholder="Status"  [(ngModel)]="status">
+    <mat-option (click)="sendStatusToParent()" *ngFor="let status of neededData.workorderStatuseses" [value]="status.status">{{status.status}}</mat-option>
+  </mat-select>
+</mat-form-field>

@@ -1,0 +1,60 @@
+<div class="modal" [ngClass]="showForm ? 'is-active' : ''">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Dodaj memorkę...</p>
+    </header>
+    <section class="modal-card-body">
+      <div *ngIf="showForm" class="row">
+
+        <div class="col-md-12 col-12">
+          <mat-form-field class="full-width">
+            <mat-select [(ngModel)]="mem_type" placeholder="Typ">
+              <!-- <mat-option *ngIf="loggedUserIn.isAdmin" value="admin">Dla koordynatorów</mat-option> -->
+              <mat-option value="person">Dla danych osób + koordynatorów</mat-option>
+              <!-- <mat-option *ngIf="loggedUserIn.isAdmin" value="wo_mem">Do zlecenia</mat-option>
+              <mat-option *ngIf="loggedUserIn.isAdmin" value="client_mem">Do klienta</mat-option> -->
+              <mat-option value="future">Zaplanowane na dzień</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+
+        <div class="col-md-12 col-12">
+          <location-dropdown [multiple]="true" [location]="person" (locationMsg)="receiveLocation($event)"></location-dropdown>
+        </div>
+        <div *ngIf="mem_type === 'future'" class="col-md-12 col-12">
+            <mat-form-field class="full-width">
+              <input matInput [(ngModel)]="toBeDoneDate" [matDatepicker]="picker" placeholder="Na kiedy zaplanować memorkę?">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        <div *ngIf="mem_type === 'wo_mem'" class="col-md-12 col-12">
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="wo" placeholder="Numer zlecenia...">
+          </mat-form-field>
+        </div>
+
+        <div *ngIf="mem_type === 'client_mem'" class="col-md-12 col-12">
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="client" placeholder="Id klienta...">
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-12 col-12">
+          <mat-form-field class="full-width">
+              <textarea [(ngModel)]="description" matInput placeholder="Dodaj opis..."></textarea>
+          </mat-form-field>
+
+        </div>
+
+
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" (click)="addMem()">Zapisz</button>
+      <button class="button" (click)="closeForm()">Anuluj</button>
+    </footer>
+  </div>
+</div>

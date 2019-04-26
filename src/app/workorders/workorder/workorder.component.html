@@ -1,0 +1,242 @@
+<mat-progress-bar *ngIf="!workorder" mode="indeterminate"></mat-progress-bar>
+<workorders-type-badges [workorder]="workorder"></workorders-type-badges>
+
+<div class="row">
+  <div class="col-md-9 col-12">
+    <!-- Column 1 -->
+    <!-- Row 1 -->
+    <hr>
+    <div *ngIf="workorder" class="row">
+      <div class="col-md-2 col-6 full-width" (click)="copyValue(workorder.wo)">
+        Wo: {{ workorder.wo }}
+      </div>
+      <div class="col-md-2 col-6 full-width" (click)="copyValue(workorder.client)">
+        Id: {{ workorder.client }}
+      </div>
+      <div class="col-md-2 col-6 full-width">
+        Data: {{ workorder.date | date:'d-MM-yyyy' }}
+      </div>
+      <div class="col-md-2 col-6 full-width">
+        Typ: {{ workorder.type }}
+      </div>
+      <div class="col-md-4 col-12 full-width">
+        {{ workorder.city }}, {{ workorder.street }} {{ workorder.home }}/{{ workorder.locale }}
+      </div>
+    </div>
+
+
+    <!-- Row 2 -->
+    <hr>
+    <div *ngIf="workorder" class="row">
+      <div class="col-md-2 col-12">
+        <mat-form-field class="full-width">
+          <input matInput [(ngModel)]="workorder.lastChange" [matDatepicker]="picker2" placeholder="Data wykonania">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-md-4 col-12">
+        <status-dropdown (statusMsg)="receiveStatus($event)"></status-dropdown>
+      </div>
+      <div class="col-md-6 col-12">
+        <location-dropdown [multiple]="true" [location]="workorder.locations" (locationMsg)="receiveLocation($event)">
+        </location-dropdown>
+      </div>
+    </div>
+
+
+    <!-- Row 3 -->
+    <hr>
+    <div *ngIf="workorder" class="row">
+      <div class="col-md-9 col-12">
+        <codes-choose [workorder]="workorder" [location]="workorder.location" [neededData]="neededData"
+          [loggedUserIn]="loggedUserIn" [users]="users" [codesValues]="codesValues"></codes-choose>
+      </div>
+      <div class="col-md-3 col-12">
+        <div>
+          <mat-checkbox color="primary" (change)="setTransfer()" [(ngModel)]="transfer"
+            *ngIf="workorder.type != 'DS' && workorder.type != 'Serwis'" class="example-margin">Transfer</mat-checkbox>
+        </div>
+        <div>
+          <mat-checkbox color="primary" (change)="setClientCpe()" [(ngModel)]="clientCpe"
+            *ngIf="workorder.type != 'DS' && workorder.type != 'Serwis'" class="example-margin">Sprzęt klienta na
+            multiroom</mat-checkbox>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Row 4 -->
+    <hr>
+    <div *ngIf="workorder" class="row">
+      <div class="col-md-12 col-12">
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Wpisz dodatkowy opis do zlecenia" [(ngModel)]="workorder.description"
+            value=""></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-12 col-12">
+        <mat-chip *ngIf="!showOwnedCpes && workorder.type != 'Serwis'" color="primary" (click)="loadCpes()"
+          selected="FALSE">Pobierz
+          twoje
+          sprzęty do zamontowania</mat-chip>
+
+        <mat-form-field *ngIf="!newWo && showOwnedCpes" class="full-width">
+          <mat-select placeholder="Wybierz zamontowany sprzęt" [(ngModel)]="workorder.equipments" multiple>
+            <mat-optgroup *ngFor="let group of equipmentsGroups" [label]="group.type" [disabled]="group.disabled">
+              <mat-option *ngFor="let equip of group.sn" [value]="equip">
+                {{ equip }}
+              </mat-option>
+            </mat-optgroup>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+
+    <!-- Row 5 -->
+    <hr>
+    <div *ngIf="workorder" class="row">
+      <div class="col-md-6 col-12">
+        <h4 class="text-primary">Zamontowane sprzęty: {{ equipmentsCpes }}</h4>
+        <mat-form-field class="full-width">
+          <mat-chip-list #chipList2>
+            <mat-chip *ngFor="let cpe of workorder.equipments" [selectable]="selectable" [removable]="removable">
+              {{cpe}}
+              <mat-icon matChipRemove (click)="removeCpe(cpe)" *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="Zamontowane sprzęty" [matChipInputFor]="chipList2"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="addCpe($event)" />
+          </mat-chip-list>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 col-12">
+        <removes-choose [workorder]="workorder"></removes-choose>
+      </div>
+      <div class="col-md-6 col-6"></div>
+
+      <div class="col-md-6 col-6">
+        <span *ngIf="cpeOwnedByClient.length > 0">
+          Naciśnij jak odebrałeś:
+          <span *ngFor="let cpeOnClient of cpeOwnedByClient; index as i;">
+            <mat-chip (click)="addReturnToReturned(cpeOnClient, i)">
+              {{cpeOnClient}}
+            </mat-chip>
+          </span></span>
+      </div>
+    </div>
+
+    <!-- Row 6 -->
+    <hr>
+    <div *ngIf="workorder" class="row">
+      <div class="col-md-12 col-12">
+        <mat-checkbox color="primary" disabled="{{saved || workorder.sended}}" *ngIf="loggedUserIn.canAdd"
+          class="example-margin" (change)="toggleConsole()" [(ngModel)]="toggle">Sprawdzone</mat-checkbox>
+      </div>
+      <div class="col-md-12 col-12">
+        <button [disabled]="saved || workorder.sended" mat-raised-button color="primary" (click)="saveWorkorder()">
+          Zapisz
+          zlecenie</button>
+        <button mat-raised-button color="warn" (click)="return()">Powrót</button>
+
+        <button *ngIf="showFiles" class="button is-light" (click)="showModal()">💾</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="workorder" class="col-md-3 col-12">
+    <!-- Column 2 -->
+    <info-box [workorder]="workorder"></info-box>
+
+    <hr>
+    <h4 class="text-primary">Sprzęt:</h4>
+    <div *ngIf="equipment">
+      <div *ngFor="let sn of equipment">
+        <div class="tags has-addons row">
+          <span matTooltip="{{ sn.status }}" *ngIf="sn.status === 'OK'" class="col-md-2 col-2 tag is-success">👍</span>
+          <span matTooltip="{{ sn.status }}" *ngIf="sn.status != 'OK'" class="col-md-2 col-2 tag is-danger">👎</span>
+          <span class="tag col-md-10 col-10">{{ sn.sn }}</span>
+        </div>
+      </div>
+      <div *ngIf="workorder.type.substr(0,4) === 'ETTH'" class="row">
+        <button class="full-width" *ngIf="workorder.equipments.length > 0 && workorder.cpeActivated != false"
+          mat-raised-button color="warn" (click)="askForCpeActivation()">Zleć aktywacje
+          sprzętu</button>
+        <!-- <button class="full-width" *ngIf="!dzierzawa" mat-raised-button color="primary" (click)="askForDzierzawa()">Zleć
+          dzierżawę</button> -->
+
+        <mat-progress-bar *ngIf="workorder.cpeActivated === false" mode="indeterminate"></mat-progress-bar>
+        <button class="full-width" *ngIf="workorder.cpeActivated == false && loggedUserIn.canAdd" mat-raised-button
+          color="primary" (click)="setCpeAsActivated()">Oznacz jako aktywowane</button>
+
+        <span matTooltip="Aktywowano sprzęt przez e-mail" *ngIf="workorder.cpeActivated"
+          class="col-md-2 col-2 tag is-info">📧</span>
+        <span *ngIf="workorder.cpeActivated" class="tag col-md-10 col-10">Aktywowano sprzęt przez e-mail</span>
+      </div>
+
+    </div>
+
+    <hr>
+    <div>
+      <h4 class="text-primary">Dodaj memorkę do:</h4>
+      <a class="button is-small is-outlined is-rounded" (click)="addMemoriesBig('client_mem')">Klienta</a>
+      <a class="button is-small is-outlined is-rounded" (click)="addMemoriesBig('wo_mem')">Zlecenia</a>
+      <a class="button is-small is-outlined is-rounded" (click)="addMemoriesBig('person')">Technika</a>
+
+
+  
+
+    <div *ngFor="let mem of memories | async">
+        <single-memories [loggedUserIn]="loggedUserIn" [mem]="mem"></single-memories>
+      </div>
+      <hr>
+      <div *ngFor="let memWo of memoriesWo | async">
+        <single-memories [loggedUserIn]="loggedUserIn" [mem]="memWo"></single-memories>
+      </div>
+      <hr>
+      <div *ngFor="let memPerson of memoriesPerson | async">
+        <single-memories [loggedUserIn]="loggedUserIn" [mem]="memPerson"></single-memories>
+      </div>
+      <hr>
+
+
+
+
+
+    <uploader [workorder]="workorder"></uploader>
+  </div>
+</div>
+
+<div *ngFor="let file of files">
+  <files-modal *ngIf="showForm" [showForm]="showForm" [files]="files" (formStatus)="formStatus($event)"></files-modal>
+</div>
+
+<!-- <files-modal *ngIf="showForm" [showForm]="showForm" [workorder]="workorder" (formStatus)="formStatus($event)"></files-modal> -->
+
+<!-- <div *ngFor="let note of notes | async">
+    <note-detail [note]="note"></note-detail>
+</div> -->
+<!-- 
+<div *ngIf="workorder">
+  {{ workorder | json }}
+</div> -->
+
+
+<!-- 
+<div *ngIf="neededData">
+  {{ neededData | json }}
+</div>
+
+<div *ngIf="loggedUserIn">
+  {{ loggedUserIn | json }}
+</div>
+
+<div *ngIf="users">
+  {{ users | json }}
+</div>
+
+<div *ngIf="codesValues">
+  {{ codesValues | json }}
+</div> -->

@@ -1,0 +1,11 @@
+<h4 class="text-primary">Zamontowane sprzęty:</h4>
+<mat-form-field class="full-width">
+  <mat-chip-list #chipList2>
+    <mat-chip *ngFor="let cpe of workorder.equipments" [selectable]="selectable" [removable]="removable">
+      {{cpe}}
+      <mat-icon matChipRemove (click)="removeCpe(cpe)" *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input placeholder="Zamontowane sprzęty" [matChipInputFor]="chipList2" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="addCpe($event)" />
+  </mat-chip-list>
+</mat-form-field>

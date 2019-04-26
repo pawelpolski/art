@@ -1,0 +1,191 @@
+<div class="row">
+  <div class="col-md-12 col-12">
+    <location-dropdown [disabled]="!loggedUserIn.isAdmin" [multiple]="false" (locationMsg)="receiveLocation($event)">
+    </location-dropdown>
+
+    <mat-form-field class="full-width">
+      <mat-select placeholder="Miesiąc" [(ngModel)]="month">
+        <mat-option *ngFor="let months of neededData.salarys" [value]="months.month">{{months.month}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)=getSalaryForUser()>Pobierz dane</button>
+
+    <br>
+    <br>
+
+    <mat-progress-bar *ngIf="showSpinner" mode="indeterminate"></mat-progress-bar>
+
+  </div>
+  <div class="col-md-8 col-12">
+
+    <mat-card *ngIf="sallaryInfo">
+      <mat-card-header>
+        <mat-card-title>
+          <h4>Rozliczenie {{ sallaryInfo.monthAndYear }} - UPC</h4>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <h5>{{ sallaryInfo.owner }}</h5>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <div class="row">
+            <div class="col-md-4 col-12">
+              <h3 mat-subheader>Instalacje</h3>
+              <mat-list-item>
+                Wykonane: {{ sallaryInfo.finishedWorks }} <br>
+                Kwota: {{ sallaryInfo.finishedWorksValue | number}} zł
+              </mat-list-item>
+            </div>
+            <div class="col-md-4 col-12">
+              <h3 mat-subheader>Serwis</h3>
+              <mat-list-item> <br>
+                Wykonane: {{ sallaryInfo.finishedServices }} <br>
+                Kwota: {{ sallaryInfo.finishedServicesValue | number}} zł <br>
+                Dyżury: {{ sallaryInfo.workedOnFreeDayValue | number}} zł
+              </mat-list-item>
+            </div>
+            <div class="col-md-4 col-12">
+              <h3 mat-subheader>Info</h3>
+              <mat-list-item> <br>
+                Wykonane: {{ sallaryInfo.finished }} <br>
+                Niewykonane: {{ sallaryInfo.notFinished }} <br>
+              </mat-list-item>
+            </div>
+          </div>
+        </mat-list>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item>
+            <div class="row">
+              <div class="col-md-12 col-12">
+                <h5>Do wypłaty: {{ sallaryInfo.ownedMoney | number }} zł</h5>
+              </div>
+
+            </div>
+          </mat-list-item>
+          <mat-card-content>
+            <mat-list>
+              <div class="row">
+                <div class="col-md-4 col-12">
+                  <mat-list-item>
+                    <h6><span *ngIf="sallaryInfo.toRemove > 0" style="font-size: 1em; color: rgba(255, 0, 0, 0.8);">
+                        Przygotowane: {{ sallaryInfo.toRemove }} szt.
+                      </span></h6>
+                  </mat-list-item>
+                </div>
+                <div class="col-md-4 col-12">
+                  <mat-list-item>
+                    <h6><span *ngIf="toRemoveCount > 0" style="font-size: 1em; color: rgba(255, 0, 0, 0.8);">
+                        Ukarano: {{ toRemoveCount }} szt.
+                      </span></h6>
+                  </mat-list-item>
+                </div>
+                <div class="col-md-4 col-12">
+                  <mat-list-item>
+                    <h6><span *ngIf="toRemoveCount > 0" style="font-size: 1em; color: rgba(255, 0, 0, 0.8);">
+                        Suma kary: {{ toRemoveCount*14.0 }} zł
+                      </span></h6>
+                  </mat-list-item>
+                </div>
+              </div>
+            </mat-list>
+          </mat-card-content>
+          <mat-list-item>
+            <div class="row">
+              <div class="col-md-12 col-12">
+                <h5>Do wypłaty po ukaraniu: {{ sallaryInfo.ownedMoney-toRemoveCount*14.0 | number }} zł</h5>
+              </div>
+
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+
+    <mat-card *ngIf="sallaryInfo">
+      <mat-card-content>
+        <mat-list>
+          <div class="row">
+            <div class="col-md-4 col-12">
+              <h3 mat-subheader>Kabel</h3>
+              <mat-list-item>
+                Z kodów: {{ sallaryInfo.rg6FromCodes | number }} m <br>
+                Z magazynu: {{ sallaryInfo.rg6*305.0 | number }} m
+              </mat-list-item>
+            </div>
+            <div class="col-md-4 col-12">
+              <h3 mat-subheader>ZMR</h3>
+              <mat-list-item>
+                Z kodów: {{ sallaryInfo.zmrFromCodes | number }} szt. <br>
+                Z magazynu: {{ sallaryInfo.zmr | number }} szt.
+              </mat-list-item>
+            </div>
+            <div class="col-md-4 col-12">
+              <h3 mat-subheader>ZMP</h3>
+              <mat-list-item>
+                Z kodów: {{ sallaryInfo.zmpFromCodes | number }} szt. <br>
+                Z magazynu: {{ sallaryInfo.zmp | number }} szt.
+              </mat-list-item>
+            </div>
+          </div>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+
+    <div *ngFor="let desc of toRemove">
+      <mat-chip color="warn" selected="FALSE">{{desc.adress}}
+        <span value="below" matTooltip="{{desc.toRemoveDesc}}">
+
+        </span></mat-chip>
+
+    </div>
+
+  </div>
+  <div class="col-md-4 col-12">
+      <mat-card *ngIf="sallaryInfoNetia">
+          <mat-card-header>
+            <mat-card-title>
+              <h4>Rozliczenie {{ sallaryInfoNetia.monthAndYear }} - NETIA</h4>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <h5>{{ sallaryInfoNetia.owner }}</h5>
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-list>
+              <div class="row">
+                <div class="col-md-12 col-12">
+                  <h3 mat-subheader>Instalacje</h3>
+                  <mat-list-item>
+                    Wykonane: {{ sallaryInfoNetia.finishedWorks }} <br>
+                    Niewykonane: {{ sallaryInfoNetia.notFinished }} <br>
+                    Kwota: {{ sallaryInfoNetia.finishedWorksValue | number}} zł
+                  </mat-list-item>
+                </div>
+
+
+              </div>
+            </mat-list>
+          </mat-card-content>
+          <mat-card-content>
+            <mat-list>
+              <mat-list-item>
+                <div class="row">
+                  <div class="col-md-12 col-12">
+                    <h5>Do wypłaty: {{ sallaryInfoNetia.ownedMoney | number }} zł</h5>
+                  </div>
+    
+                </div>
+              </mat-list-item>
+
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+  </div>
+
+</div>

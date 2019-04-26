@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-3 col-12">
+    <status-dropdown (statusMsg)="receiveStatus($event)"></status-dropdown>
+  </div>
+  <div class="col-md-3 col-12">
+    <location-dropdown [disabled]="!loggedUserIn.isAdmin" [multiple]="false" (locationMsg)="receiveLocation($event)"></location-dropdown>
+  </div>
+  <div class="col-md-2 col-6">
+    <mat-form-field class="full-width">
+      <input matInput [(ngModel)]="queryData.startingDate" [matDatepicker]="picker" placeholder="Data początkowa">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="col-md-2 col-6">
+    <mat-form-field class="full-width">
+      <input matInput [(ngModel)]="queryData.endingDate" [matDatepicker]="picker2" placeholder="Data końcowa">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="col-md-2 col-12">
+    <button class="full-width" mat-raised-button (click)="showWorkorders()">🔍 Pokaż zlecenia</button>
+  </div>
+</div>
+  <hr>
+  <div class="row">
+  <div class="col-md-2 col-12">
+    <mat-form-field class="full-width">
+      <mat-select placeholder="Miesiąc" [(ngModel)]="month">
+        <mat-option *ngFor="let months of neededData.salarys" [value]="months.month">{{months.month}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="col-md-2 col-6">
+    <button class="full-width" mat-raised-button (click)="showAllClosed()">Zamknięte</button>
+  </div>
+  <div class="col-md-2 col-6">
+    <button class="full-width" mat-raised-button (click)="showAllOpen()">Niezamknięte</button>
+  </div>
+  <div class="col-md-2 col-6">
+    <button *ngIf="loggedUserIn.isAdmin" class="full-width" mat-raised-button (click)="showAllChecked()">Sprawdzone</button>
+  </div>
+  <div class="col-md-2 col-6">
+    <button *ngIf="loggedUserIn.isAdmin" class="full-width" mat-raised-button (click)="showAllNotChecked()">Niesprawdzone</button>
+  </div>
+  <div class="col-md-2 col-6">
+    <button *ngIf="loggedUserIn.isAdmin && company != 'netia'" class="full-width" mat-raised-button (click)="showAllCheckedAndNotSended()">Niewysłane </button>
+  </div>
+</div>

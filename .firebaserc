@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "v7": "arttel-polskipl"
+  },
+  "targets": {
+    "arttel-polskipl": {
+      "hosting": {
+        "v7": [
+          "newart"
+        ]
+      }
+    }
+  }
+}

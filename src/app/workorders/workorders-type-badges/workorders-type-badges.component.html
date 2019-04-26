@@ -1,0 +1,21 @@
+<div *ngIf="workorder">
+<span *ngIf="workorder.wo_type === 'Instalacja' && !workorder.wo === 'WINDYKACJA'" class="badge badge-info">{{ workorder.wo_type }}</span>
+
+<span *ngIf="workorder.wo === 'WINDYKACJA'" class="badge badge-warning">{{ workorder.wo }}</span>
+
+<span *ngIf="workorder.wo_type === 'Serwis'" class="badge badge-danger">{{ workorder.wo_type }}</span>
+
+<span *ngIf="workorder.type === 'DS'" class="badge badge-danger">{{ workorder.type }}</span>
+
+<span *ngIf="workorder.netia_type === 'FTTH'" class="badge badge-primary">{{ workorder.netia_type }}</span>
+
+<span *ngIf="workorder.netia_type === 'ETTH'" class="badge badge-danger">{{ workorder.netia_type }}</span>
+
+<span *ngIf="workorder.type === 'FTTH/DEMONTAŻ'" class="badge badge-primary">{{ workorder.type }}</span>
+
+<span *ngIf="!workorder.city" class="badge badge-dark">Dyżur Serwisowy</span>
+
+<span *ngIf="workorder.status === 'Zamknięte przez technika'" class="badge badge-secondary">{{ workorder.status }}</span>
+
+<span *ngIf="workorder.status != 'Zamknięte przez technika'" class="badge badge-warning">{{ workorder.status }}</span>
+</div>
